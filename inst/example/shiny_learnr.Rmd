@@ -4,7 +4,22 @@ output: learnr::tutorial
 runtime: shiny_prerendered
 ---
 
-```{r}
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
 library(shinylearnrdemo)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Click on the Red Circle
+
+```{r, circle}
 circleInput("test")
 ```
+
+```{r circle-check}
+grade_result(
+  pass_if(~ identical(.result, "circ_red"), "Good job!")
+)
+```
+
