@@ -118,6 +118,7 @@ $(document).ready(function () {
 
 <div id="section-click-on-the-red-circle" class="section level2">
 <h2>Click on the Red Circle</h2>
+<pre class="r"><code>circleInput(&quot;test&quot;)</code></pre>
 <div class="circleInput" id="test" data-input-id="test"><svg class='circ' height='100' width='100' xmlns='http://www.w3.org/2000/svg'>
         <circle circle-type ='circ_red' cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red'/>
       </svg>
@@ -127,6 +128,9 @@ $(document).ready(function () {
       <svg id ='circ_yellow'class='circ' height='100' width='100' xmlns='http://www.w3.org/2000/svg'>
         <circle circle-type ='circ_yellow' cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='yellow'/>
       </svg></div>
+<pre class="r"><code>grade_result(
+  pass_if(~ identical(input$test, &quot;circ_red&quot;), &quot;Good job!&quot;)
+)</code></pre>
 <pre><code>## function (check_env) 
 ## {
 ##     last_value &lt;- check_env$.last_value
@@ -147,14 +151,13 @@ $(document).ready(function () {
 ##     else glue_incorrect, .is_match = found_grade, .is_correct = final_grade$correct, 
 ##         .message = final_grade$message, .correct = correct, .incorrect = incorrect))
 ## }
-## &lt;bytecode: 0x7fe7f0b7bc38&gt;
-## &lt;environment: 0x7fe7f0b209b8&gt;</code></pre>
+## &lt;bytecode: 0x7f9fc025cff0&gt;
+## &lt;environment: 0x7f9fc0257f18&gt;</code></pre>
 
 <script type="application/shiny-prerendered" data-context="server-start">
 library(learnr)
 library(gradethis)
 library(shinylearnrdemo)
-knitr::opts_chunk$set(echo = FALSE)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">

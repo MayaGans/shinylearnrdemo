@@ -8,7 +8,6 @@ runtime: shiny_prerendered
 library(learnr)
 library(gradethis)
 library(shinylearnrdemo)
-knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Click on the Red Circle
@@ -19,7 +18,7 @@ circleInput("test")
 
 ```{r circle-check}
 grade_result(
-  pass_if(~ identical(.result, "circ_red"), "Good job!")
+  pass_if(~ identical(input$test, "circ_red"), "Good job!")
 )
 ```
 
