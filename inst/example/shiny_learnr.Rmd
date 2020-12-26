@@ -1,0 +1,10 @@
+---
+title: "Shiny and Learnr"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r}
+library(shinylearnrdemo)
+circleInput("test")
+```
