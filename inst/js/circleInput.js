@@ -11,7 +11,7 @@ $.extend(shinyCircleBinding, {
   // use this as the input's value
   // SEE subscribe
   getValue: function getValue(el) {
-    var value = $(el).find('.selected').attr("id")
+    var value = $(el).find('.selected').attr("circle-type")
     return value
   },
 

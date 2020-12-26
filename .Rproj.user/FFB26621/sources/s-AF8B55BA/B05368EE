@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1608586417200.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
     "id" : "B05368EE",
-    "lastKnownWriteTime" : 1608957140,
-    "last_content_update" : 1608957140376,
+    "lastKnownWriteTime" : 1608994793,
+    "last_content_update" : 1608994802872,
     "path" : "~/Documents/DEMOS/shinylearnrdemo/R/circleInput.R",
     "project_path" : "R/circleInput.R",
     "properties" : {
-        "cursorPosition" : "39,5",
-        "scrollLine" : "28"
+        "cursorPosition" : "10,12",
+        "scrollLine" : "2"
     },
     "read_only" : false,
     "read_only_alternatives" : [
