@@ -1,0 +1,31 @@
+.JakesButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.single-button-choice {
+    width: 100%;
+    border: solid 1px #ccc;;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    text-align:center;
+    border-radius: 5px;
+}
+
+.single-button-choice:hover {
+  background-color: #ccc;
+   -moz-box-shadow:    inset 0 0 2px #000000;
+   -webkit-box-shadow: inset 0 0 2px #000000;
+   box-shadow:         inset 0 0 2px #000000;
+   cursor: pointer;
+}
+
+.single-button-choice:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}

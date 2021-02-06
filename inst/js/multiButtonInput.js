@@ -1,17 +1,17 @@
-var shinyCircleBinding = new Shiny.InputBinding();
-$.extend(shinyCircleBinding, {
+var shinyMultiButtonBinding = new Shiny.InputBinding();
+$.extend(shinyMultiButtonBinding, {
 
   // find the dom element with input$id
   // this becomes el downstream
   find: function find(scope) {
-    return $(scope).find(".circleInput")
+    return $(scope).find(".JakesButtons")
   },
 
   // get the data-anatomy of the element with class selected
   // use this as the input's value
   // SEE subscribe
   getValue: function getValue(el) {
-    var value = $(el).find('.selected').attr("circle-type")
+    var value = $(el).find(".selected").text()
     return value
   },
 
@@ -19,18 +19,18 @@ $.extend(shinyCircleBinding, {
   // then add the selected class to the clicked limb
   // this is used in getValue
   subscribe: function(el, callback) {
-    $(el).on("click.shinyCircleBinding", function(evt) {
+    $(el).on("click.shinyMultiButtonBinding", function(evt) {
       // remove all of the selected classes inside our element
       $(el).find(".selected").removeClass("selected");
       // set the selected class to the closest clicked part
-      //console.log($(evt.target).attr('id'))
+      console.log($(evt.target).attr('id'))
       $(evt.target).addClass('selected');
       callback();
     })
   },
   unsubscribe: function(el) {
-    $(el).off(".shinyCircleBinding");
+    $(el).off(".shinyMultiButtonBinding");
   }
 });
 
-Shiny.inputBindings.register(shinyCircleBinding, 'shinylearnrdemo.circleInput');
+Shiny.inputBindings.register(shinyMultiButtonBinding, 'shinylearnrdemo.multiButtonInput');

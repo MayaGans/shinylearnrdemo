@@ -12,7 +12,8 @@ $.extend(shinyCircleBinding, {
   // SEE subscribe
   getValue: function getValue(el) {
     var value = $(el).find('.selected').attr("circle-type")
-    return value
+    // is there any way to hold on to name here?
+    return [{name: value}, {test: value}]
   },
 
   // on click, remove any previous selected classes
